@@ -13,6 +13,15 @@ This project uses a pre-trained deep learning model to detect whether a person i
 
 ---
 
+## 📡 ESP32-CAM Integration with TCP/IP
+
+The project also uses an ESP32-CAM board to transmit live video over Wi-Fi and remotely control a surveillance robot.
+
+- The ESP32 connects to a Wi-Fi network using the WiFi.begin() function.
+- It starts a web server (startCameraServer()), which runs on top of the TCP/IP protocol stack.
+- A live MJPEG video stream and robot movement commands (forward, backward, left, right) are transmitted via HTTP requests over TCP.
+- This demonstrates a practical use of TCP/IP for real-time communication between a web browser and an IoT device.
+
 ## 🧠 Model Overview
 
 The project uses:
@@ -55,6 +64,4 @@ When running the script, you'll see your webcam feed with faces labeled as:
 ✅ Mask: 98.74% — shown in green
 
 ❌ No Mask: 99.11% — shown in red
-
-
 
